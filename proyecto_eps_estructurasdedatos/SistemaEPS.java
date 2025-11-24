@@ -213,12 +213,13 @@ public class SistemaEPS {
         String doc = sc.nextLine();
         Usuario usr = buscarUsuarioPorDocumento(doc);
         if (usr != null) {
-            System.out.print("Ingrese la fecha: ");
+            System.out.print("Ingrese la hora: ");
             int hora = sc.nextInt();
             if (hora >=0 && hora <= 24){
                 if (!matrizDispersa.containsKey(hora)) {
                     RegistroCitaNormal nuevaCita = new RegistroCitaNormal(usr,hora);
                     matrizDispersa.put(hora , nuevaCita);
+                    System.out.println("Usuario agregado a la matriz de citas.");
                 }
                 else{
                     System.out.print("Horario no disponible");
@@ -227,7 +228,6 @@ public class SistemaEPS {
             else{
                 System.out.print("Hora no válida");
             }
-            System.out.println("Usuario agregado a la cola de citas.");
         } else {
             System.out.println("Usuario no encontrado.");
         }
