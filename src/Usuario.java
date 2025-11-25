@@ -10,10 +10,10 @@ public class Usuario {
     private int edad;
     private String sexo;
 
-    // ESTRUCTURA: VECTOR DISPERSO
-    // Usamos un Map para simular un vector que solo guarda posiciones ocupadas.
-    // Key (Integer): Código de la enfermedad (índice del vector).
-    // Value (String): Descripción del diagnóstico.
+    //VECTOR DISPERSO
+    //Usamos un Map para simular un vector que solo guarda posiciones ocupadas.
+    //Key (Integer): Código de la enfermedad (índice del vector).
+    //Value (String): Descripción del diagnóstico.
     private Map<Integer, String> historiaClinica;
 
     public Usuario(String tipoDocumento, String numeroDocumento,
@@ -27,8 +27,6 @@ public class Usuario {
         // Inicializamos el "vector disperso" vacío
         this.historiaClinica = new HashMap<>();
     }
-
-    // --- MÉTODOS PARA EL VECTOR DISPERSO (HISTORIA CLÍNICA) ---
 
     // Agrega un antecedente. Si el código ya existe, actualiza la descripción.
     public void agregarAntecedente(int codigoEnfermedad, String descripcion) {
@@ -50,8 +48,6 @@ public class Usuario {
         }
         return sb.toString();
     }
-
-    // --- GETTERS ---
 
     public String getNumeroDocumento() {
         return numeroDocumento;
@@ -76,8 +72,6 @@ public class Usuario {
     public String getSexo() {
         return sexo;
     }
-
-    // --- TO STRING ---
 
     @Override
     public String toString() {

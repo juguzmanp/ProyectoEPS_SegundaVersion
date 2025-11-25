@@ -1,10 +1,7 @@
-public class NodoArbol {
-    //El dato que guardamos (El objeto Usuario completo)
-    Usuario usuario;
-
-    //Los "hijos" del nodo
-    NodoArbol izquierdo; //Para documentos menores
-    NodoArbol derecho;   //Para documentos mayores
+class NodoArbol {
+    public Usuario usuario;
+    NodoArbol izquierdo;
+    NodoArbol derecho;
 
     public NodoArbol(Usuario usuario) {
         this.usuario = usuario;
